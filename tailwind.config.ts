@@ -61,6 +61,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				racing: {
+					orange: '#FF6B00',
+					black: '#1A1A1A',
+					silver: '#C0C0C0',
+					white: '#FFFFFF'
 				}
 			},
 			borderRadius: {
