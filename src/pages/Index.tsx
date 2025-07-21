@@ -6,22 +6,25 @@ import Icon from '@/components/ui/icon';
 const Index = () => {
   const riders = [
     {
-      name: "АЛЕКС ВОЛКОВ",
-      number: "01",
-      stats: "15 побед • 3 чемпионства",
-      image: "/img/59bab91b-ac5b-491e-add1-6bf53dfcaa56.jpg"
+      name: "Трубин Дмитрий",
+      number: "454",
+      stats: "JWR • YAMAHA",
+      image: "https://cdn.poehali.dev/files/ba95049e-a584-4095-8d97-b0ec1212da3e.png",
+      sponsors: ["YAMAHA", "JWR", "SCOTT", "MAXIMA Racing Oils"]
     },
     {
-      name: "ДМИТРИЙ SPEED",
-      number: "22", 
-      stats: "12 побед • 2 чемпионства",
-      image: "/img/59bab91b-ac5b-491e-add1-6bf53dfcaa56.jpg"
+      name: "Хомицевич Максим",
+      number: "919", 
+      stats: "JWR • YAMAHA",
+      image: "https://cdn.poehali.dev/files/645602ed-ed61-4cff-bdde-9f54615e2289.png",
+      sponsors: ["YAMAHA", "JWR", "SCOTT", "MAXIMA Racing Oils"]
     },
     {
-      name: "МАКСИМ THUNDER",
-      number: "88",
-      stats: "8 побед • 1 чемпионство",
-      image: "/img/59bab91b-ac5b-491e-add1-6bf53dfcaa56.jpg"
+      name: "Ганеев Динислам",
+      number: "91",
+      stats: "JWR • YAMAHA",
+      image: "https://cdn.poehali.dev/files/cb6c6c54-3a94-4031-b1b2-4effad25b204.png",
+      sponsors: ["YAMAHA", "JWR", "SCOTT", "MAXIMA Racing Oils"]
     }
   ];
 
@@ -31,10 +34,10 @@ const Index = () => {
       <header className="relative py-6 px-4 border-b border-racing-silver/20">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <img src="/img/2cb4a29f-3632-4bf0-9451-2ba9cb46f3e7.jpg" alt="SPYSTAV Team" className="h-12 w-auto" />
+            <div className="bg-racing-orange text-racing-white font-bold text-2xl px-4 py-2 rounded">JWR</div>
             <div>
-              <h1 className="text-2xl font-bold font-['Montserrat'] text-racing-orange">SPYSTAV</h1>
-              <p className="text-racing-silver text-sm">MX BIKES TEAM</p>
+              <h1 className="text-2xl font-bold font-['Montserrat'] text-racing-orange">JWR TEAM</h1>
+              <p className="text-racing-silver text-sm">MOTOCROSS RACING</p>
             </div>
           </div>
           <nav className="hidden md:flex space-x-6">
@@ -53,12 +56,12 @@ const Index = () => {
           <div className="max-w-2xl">
             <Badge className="bg-racing-orange text-racing-white mb-4">ЧЕМПИОНЫ MX BIKES</Badge>
             <h1 className="text-5xl md:text-7xl font-bold font-['Montserrat'] mb-6 text-racing-white leading-none">
-              SPYSTAV
-              <span className="block text-racing-orange">RACING TEAM</span>
+              JWR
+              <span className="block text-racing-orange">MOTOCROSS TEAM</span>
             </h1>
             <p className="text-xl text-racing-silver mb-8 font-['Roboto']">
-              Профессиональная команда мотокросса в MX Bikes. 
-              Скорость, адреналин и победы на виртуальных трассах.
+              Профессиональная команда мотокросса с Дмитрием Трубиным, Максимом Хомицевичем и Динисламом Ганеевым. 
+              Скорость, мастерство и страсть к мотокроссу.
             </p>
             <div className="flex space-x-4">
               <Button 
@@ -82,19 +85,19 @@ const Index = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-racing-orange mb-2">35</div>
-              <div className="text-racing-silver">Побед</div>
+              <div className="text-4xl md:text-5xl font-bold text-racing-orange mb-2">454</div>
+              <div className="text-racing-silver">Трубин</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-racing-orange mb-2">6</div>
-              <div className="text-racing-silver">Чемпионств</div>
+              <div className="text-4xl md:text-5xl font-bold text-racing-orange mb-2">919</div>
+              <div className="text-racing-silver">Хомицевич</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-racing-orange mb-2">3</div>
-              <div className="text-racing-silver">Пилота</div>
+              <div className="text-4xl md:text-5xl font-bold text-racing-orange mb-2">91</div>
+              <div className="text-racing-silver">Ганеев</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-racing-orange mb-2">2024</div>
+              <div className="text-4xl md:text-5xl font-bold text-racing-orange mb-2">2025</div>
               <div className="text-racing-silver">Сезон</div>
             </div>
           </div>
@@ -117,25 +120,36 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {riders.map((rider, index) => (
               <Card key={index} className="bg-racing-black/80 border-racing-silver/20 hover:border-racing-orange/50 transition-all duration-300 group">
-                <CardContent className="p-6">
-                  <div className="relative mb-6 overflow-hidden rounded-lg">
+                <CardContent className="p-0">
+                  <div className="relative mb-4 overflow-hidden rounded-t-lg">
                     <img 
                       src={rider.image} 
                       alt={rider.name}
-                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                      className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300"
                     />
-                    <div className="absolute top-4 right-4 bg-racing-orange text-racing-white font-bold text-2xl px-3 py-1 rounded">
+                    <div className="absolute top-4 right-4 bg-racing-orange text-racing-white font-bold text-3xl px-4 py-2 rounded shadow-lg">
                       #{rider.number}
                     </div>
+                    <div className="absolute bottom-4 left-4 text-white font-bold text-xl bg-black/50 px-3 py-1 rounded backdrop-blur-sm">
+                      {rider.stats}
+                    </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-racing-white mb-2 font-['Montserrat']">
-                    {rider.name}
-                  </h3>
-                  <p className="text-racing-silver mb-4">{rider.stats}</p>
-                  <Button className="w-full bg-racing-orange/10 hover:bg-racing-orange text-racing-orange hover:text-racing-white border-racing-orange/50">
-                    <Icon name="User" size={16} className="mr-2" />
-                    Профиль пилота
-                  </Button>
+                  <div className="px-6 pb-6">
+                    <h3 className="text-2xl font-bold text-racing-white mb-4 font-['Montserrat']">
+                      {rider.name}
+                    </h3>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {rider.sponsors.map((sponsor, sponsorIndex) => (
+                        <Badge key={sponsorIndex} className="bg-racing-orange/20 text-racing-orange text-xs">
+                          {sponsor}
+                        </Badge>
+                      ))}
+                    </div>
+                    <Button className="w-full bg-racing-orange/10 hover:bg-racing-orange text-racing-orange hover:text-racing-white border-racing-orange/50">
+                      <Icon name="User" size={16} className="mr-2" />
+                      Профиль пилота
+                    </Button>
+                  </div>
                 </CardContent>
               </Card>
             ))}
@@ -199,10 +213,10 @@ const Index = () => {
       <footer className="py-12 px-4 bg-racing-black border-t border-racing-silver/20">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-4 mb-6">
-            <img src="/img/2cb4a29f-3632-4bf0-9451-2ba9cb46f3e7.jpg" alt="SPYSTAV Team" className="h-10 w-auto" />
-            <h3 className="text-2xl font-bold text-racing-orange font-['Montserrat']">SPYSTAV</h3>
+            <div className="bg-racing-orange text-racing-white font-bold text-xl px-3 py-1 rounded">JWR</div>
+            <h3 className="text-2xl font-bold text-racing-orange font-['Montserrat']">JWR TEAM</h3>
           </div>
-          <p className="text-racing-silver mb-4">© 2024 SPYSTAV Racing Team. Все права защищены.</p>
+          <p className="text-racing-silver mb-4">© 2025 JWR Motocross Team. Все права защищены.</p>
           <div className="flex justify-center space-x-6">
             <a href="https://t.me/jwrteam454" target="_blank" rel="noopener noreferrer" className="text-racing-silver hover:text-racing-orange transition-colors">
               <Icon name="Send" size={24} />
