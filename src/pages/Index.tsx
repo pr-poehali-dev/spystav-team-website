@@ -61,13 +61,16 @@ const Index = () => {
               Скорость, адреналин и победы на виртуальных трассах.
             </p>
             <div className="flex space-x-4">
-              <Button className="bg-racing-orange hover:bg-racing-orange/90 text-racing-white px-8 py-3 text-lg">
-                <Icon name="Trophy" size={20} className="mr-2" />
-                Наши достижения
+              <Button 
+                onClick={() => window.open('https://t.me/jwrteam454', '_blank')}
+                className="bg-racing-orange hover:bg-racing-orange/90 text-racing-white px-8 py-3 text-lg"
+              >
+                <Icon name="Send" size={20} className="mr-2" />
+                Telegram канал
               </Button>
               <Button variant="outline" className="border-racing-silver text-racing-silver hover:bg-racing-silver hover:text-racing-black px-8 py-3 text-lg">
-                <Icon name="Play" size={20} className="mr-2" />
-                Смотреть видео
+                <Icon name="Trophy" size={20} className="mr-2" />
+                Наши достижения
               </Button>
             </div>
           </div>
@@ -177,9 +180,12 @@ const Index = () => {
             Присоединяйтесь к нашей команде или следите за нашими выступлениями
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-racing-white text-racing-orange hover:bg-racing-silver text-lg px-8 py-3">
-              <Icon name="MessageCircle" size={20} className="mr-2" />
-              Связаться с нами
+            <Button 
+              onClick={() => window.open('https://t.me/jwrteam454', '_blank')}
+              className="bg-racing-white text-racing-orange hover:bg-racing-silver text-lg px-8 py-3"
+            >
+              <Icon name="Send" size={20} className="mr-2" />
+              Подписаться в Telegram
             </Button>
             <Button variant="outline" className="border-racing-white text-racing-white hover:bg-racing-white hover:text-racing-orange text-lg px-8 py-3">
               <Icon name="Users" size={20} className="mr-2" />
@@ -198,14 +204,14 @@ const Index = () => {
           </div>
           <p className="text-racing-silver mb-4">© 2024 SPYSTAV Racing Team. Все права защищены.</p>
           <div className="flex justify-center space-x-6">
+            <a href="https://t.me/jwrteam454" target="_blank" rel="noopener noreferrer" className="text-racing-silver hover:text-racing-orange transition-colors">
+              <Icon name="Send" size={24} />
+            </a>
             <a href="#" className="text-racing-silver hover:text-racing-orange transition-colors">
               <Icon name="Youtube" size={24} />
             </a>
             <a href="#" className="text-racing-silver hover:text-racing-orange transition-colors">
               <Icon name="MessageCircle" size={24} />
-            </a>
-            <a href="#" className="text-racing-silver hover:text-racing-orange transition-colors">
-              <Icon name="Users" size={24} />
             </a>
           </div>
         </div>
